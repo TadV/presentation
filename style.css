@@ -1,0 +1,44 @@
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #100e0c; }
+body, button { font-family: Arial, Helvetica, sans-serif; color: #f4e8d8; }
+button { -webkit-tap-highlight-color: transparent; }
+#presentation { position: absolute; width: 100%; height: 100%; overflow: hidden; background: #100e0c; -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; }
+#screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.slide { position: absolute; top: 0; left: 0; width: 100%; height: auto; border: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.standby { visibility: hidden; }
+.chrome { z-index: 3; opacity: 1; -webkit-transition: opacity .22s; transition: opacity .22s; }
+#heading { position: absolute; top: 25px; left: 28px; font-size: 13px; font-weight: bold; letter-spacing: 4px; text-shadow: 0 1px 8px #000; }
+#heading span { display: block; margin-top: 7px; color: #c1b4a4; font-size: 8px; font-weight: normal; letter-spacing: 2px; }
+#controls { position: absolute; bottom: 24px; left: 50%; width: 446px; margin-left: -223px; height: 54px; text-align: center; white-space: nowrap; border: 1px solid #635343; border-color: rgba(235, 212, 185, .25); border-radius: 8px; background: #191410; background: rgba(19, 15, 12, .88); box-shadow: 0 4px 24px rgba(0, 0, 0, .35); }
+button { display: inline-block; vertical-align: middle; height: 44px; margin: 5px 0; padding: 0 12px; border: 0; border-radius: 4px; background: transparent; font-size: 12px; cursor: pointer; }
+button:hover, button:focus { background: #433023; outline: 1px solid #c59b6b; outline-offset: -2px; }
+button[aria-pressed="true"] { color: #e6b780; background: #38271e; }
+.arrow { width: 42px; padding: 0; font-size: 34px; line-height: 38px; }
+#counter { display: inline-block; vertical-align: middle; min-width: 61px; font-size: 12px; letter-spacing: 1px; color: #b7aa9b; }
+#current { color: #fff1df; font-weight: normal; }
+.separator { margin: 0 7px; color: #776555; }
+.divider { display: inline-block; vertical-align: middle; width: 1px; height: 20px; margin: 0 7px; background: #594635; }
+.rotate-icon { display: inline-block; vertical-align: middle; margin-right: 7px; font-size: 25px; line-height: 30px; }
+.fullscreen-icon { display: inline-block; position: relative; vertical-align: middle; width: 14px; height: 14px; margin-right: 9px; border: 1px solid #ead4b8; }
+.fullscreen-icon:before, .fullscreen-icon:after { content: ""; position: absolute; background: #191410; }
+.fullscreen-icon:before { left: 4px; top: -2px; width: 6px; height: 18px; }
+.fullscreen-icon:after { left: -2px; top: 4px; width: 18px; height: 6px; }
+#progress { position: absolute; z-index: 2; left: 0; bottom: 0; width: 100%; height: 2px; background: #30231b; }
+#progress-fill { display: block; height: 100%; width: 16.6667%; background: #ac3224; -webkit-transition: width .2s; transition: width .2s; }
+.quiet .chrome { opacity: 0; visibility: hidden; }
+.quiet #screen { cursor: none; }
+#message, #error { position: absolute; z-index: 4; left: 50%; top: 50%; width: 260px; margin-left: -130px; margin-top: -30px; text-align: center; font-size: 14px; border-radius: 6px; background: #191410; }
+#message { padding: 14px 0; display: none; }
+#error { padding: 14px 0; }
+#error[hidden] { display: none; }
+#error p { margin: 0 0 8px; }
+#retry { background: #633126; }
+.compact #controls { width: 294px; margin-left: -148px; bottom: 16px; }
+.compact .button-label { display: none; }
+.compact #rotate, .compact #fullscreen { width: 49px; padding: 0; }
+.compact .rotate-icon, .compact .fullscreen-icon { margin-right: 0; }
+.compact #heading { top: 16px; left: 18px; }
+.short #heading { display: none; }
+.short #controls { bottom: 12px; }
+.noscript { position: absolute; bottom: 90px; left: 0; width: 100%; text-align: center; background: #191410; }
+.noscript a { color: #e6b780; }
+@media (prefers-reduced-motion: reduce) { .chrome, #progress-fill { -webkit-transition: none; transition: none; } }
